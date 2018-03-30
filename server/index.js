@@ -9,7 +9,7 @@ const GRAPHQL_ENDPOINT = '/graphql';
 const GRAPHIQL_ENDPOINT = '/graphiql';
 
 // Some fake data
-const books = [
+const Products = [
   {
     title: "Harry Potter and the Sorcerer's stone",
     author: 'J.K. Rowling',
@@ -22,13 +22,13 @@ const books = [
 
 // The GraphQL schema in string form
 const typeDefs = `
-  type Query { books: [Book] }
-  type Book { title: String, author: String }
+  type Query { Products: [Product] }
+  type Product { title: String, author: String }
 `;
 
 // The resolvers
 const resolvers = {
-  Query: { books: () => books },
+  Query: { Products: () => Products },
 };
 
 // Put together a schema
