@@ -11,22 +11,22 @@ const GRAPHIQL_ENDPOINT = '/graphiql';
 // Some fake data
 const Products = [
   {
-    title: "Harry Potter and the Sorcerer's stone",
-    author: 'J.K. Rowling',
+    "name": "Hopsta La Vista",
+    "origin": "Canada, Ontario",
   },
   {
-    title: 'Jurassic Park',
-    author: 'Michael Crichton',
+    "name": "Labatt Blue",
+    "origin": "Canada, Ontario",
   },
 ];
 
 // The GraphQL schema in string form
 const typeDefs = `
   type Query { Products: [Product] }
-  type Product { title: String, author: String }
+  type Product { name: String, origin: String }
 `;
 
-// The resolvers
+// The resolvers are going to call a mongoose database
 const resolvers = {
   Query: { Products: () => Products },
 };
