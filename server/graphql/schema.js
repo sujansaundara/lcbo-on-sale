@@ -3,7 +3,8 @@ export default `
   type Product {
     _id: String!
     name: String!
-    origin: String!
+    style: String
+    package: String
   }
 
   type Query {

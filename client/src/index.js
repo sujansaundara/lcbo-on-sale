@@ -12,7 +12,8 @@ const client = new ApolloClient({
 const App = () => (
   <ApolloProvider client={client}>
     <div>
-      <h2>My Products on Sale</h2>
+      <h2>LCBO On Sale </h2>
+      <h3>Products with Value Added Promotion</h3>
     </div>
     <Router />
   </ApolloProvider>
